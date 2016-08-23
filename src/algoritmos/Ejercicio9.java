@@ -106,39 +106,39 @@ public class Ejercicio9 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
-        String costotal,totalmin;
-        double mi,mf,adicional,op1=0,op2,op3=0;
-        
-        if(txtMontoInicial.getText().trim().isEmpty()){
-        JOptionPane.showMessageDialog(this, "Digite Monto Inicial","ERROR",JOptionPane.ERROR_MESSAGE);
-        txtMontoInicial.requestFocusInWindow();
-    }else if(txtMontoFinal.getText().trim().isEmpty()){
-        JOptionPane.showMessageDialog(this, "Digite Monto FInal","ERROR",JOptionPane.ERROR_MESSAGE);
-        txtMontoFinal.requestFocusInWindow();
-    }else{
-        mi=Double.parseDouble(txtMontoInicial.getText());
-        mf=Double.parseDouble(txtMontoFinal.getText());
-        adicional=20;
-        op1=mf-mi;
-        op2=(op1*adicional)/100;
-        op3=op1+op2;
-    }
-        costotal=String.valueOf(op3);
-        txtCosto.setText("$"+costotal);
-        totalmin=String.valueOf(op1);
-        txtTotalMin.setText(totalmin+"min");
-        
+        String costotal, totalmin;
+        double mi, mf, adicional, op1 = 0, op2, op3 = 0;
+
+        if (txtMontoInicial.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite Monto Inicial", "ERROR", JOptionPane.ERROR_MESSAGE);
+            txtMontoInicial.requestFocusInWindow();
+        } else if (txtMontoFinal.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite Monto FInal", "ERROR", JOptionPane.ERROR_MESSAGE);
+            txtMontoFinal.requestFocusInWindow();
+        } else {
+            mi = Double.parseDouble(txtMontoInicial.getText());
+            mf = Double.parseDouble(txtMontoFinal.getText());
+            adicional = 20;
+            op1 = mf - mi;
+            op2 = (op1 * adicional) / 100;
+            op3 = op1 + op2;
+        }
+        costotal = String.valueOf(op3);
+        txtCosto.setText("$" + costotal);
+        totalmin = String.valueOf(op1);
+        txtTotalMin.setText(totalmin + "min");
+
     }//GEN-LAST:event_cmdCalcularActionPerformed
 
     private void cmdBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBorrarActionPerformed
@@ -146,28 +146,28 @@ public class Ejercicio9 extends javax.swing.JFrame {
         txtMontoFinal.setText("");
         txtCosto.setText("");
         txtTotalMin.setText("");
-        
+
         txtMontoInicial.requestFocusInWindow();
     }//GEN-LAST:event_cmdBorrarActionPerformed
 
     private void txtMontoInicialKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMontoInicialKeyTyped
-         char c=evt.getKeyChar(); 
-             
-         
-          if(!Character.isDigit(c)) { 
-              getToolkit().beep(); 
-               
-              evt.consume(); }
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
     }//GEN-LAST:event_txtMontoInicialKeyTyped
 
     private void txtMontoFinalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMontoFinalKeyTyped
-         char c=evt.getKeyChar(); 
-             
-         
-          if(!Character.isDigit(c)) { 
-              getToolkit().beep(); 
-               
-              evt.consume(); }
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
     }//GEN-LAST:event_txtMontoFinalKeyTyped
 
     /**
